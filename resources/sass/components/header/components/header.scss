@@ -1,0 +1,342 @@
+.header {
+  &_contact {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    font-size: 15px;
+
+    .account {
+      padding: 1rem 0;
+      position: relative;
+
+      .header_sub-menu {
+        width: 165px;
+        top: 3rem;
+        left: 0;
+
+        li {
+          margin: 5px 0;
+
+          a {
+            color: #000;
+
+            &:hover {
+              color: #05c3ff;
+              text-decoration: none;
+            }
+          }
+        }
+
+        &::before {
+          top: -13px;
+          left: 5px;
+        }
+      }
+
+      &:hover {
+        .header_sub-menu {
+          display: block;
+        }
+      }
+    }
+
+    .account > span {
+      font-weight: bold;
+      margin-right: 1rem;
+
+      .fa-user-circle {
+        font-size: 17px;
+      }
+    }
+
+    .call {
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #000;
+
+        &:hover {
+          color: #05c3ff;
+          text-decoration: none;
+        }
+
+        .fa-sms {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  &_logo {
+    padding: 1rem 0;
+    a {
+      display: block;
+      width: 100%;
+
+      img {
+        width: 125px;
+      }
+    }
+  }
+
+  &_search {
+    width: 40%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15px;
+
+    & > ul {
+      list-style: none;
+      display: flex;
+      margin-bottom: 0;
+      li {
+        padding: 2rem 0.75rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        span {
+          i {
+            font-size: 17px;
+          }
+        }
+
+        &:first-child {
+          &:hover {
+            span {
+              color: #05c3ff;
+            }
+
+            i {
+              color: #000;
+            }
+          }
+
+          form {
+            position: relative;
+            width: 100%;
+            opacity: 1;
+
+            button {
+              position: absolute;
+              right: 0;
+              top: 0.5rem;
+              background-color: transparent;
+              border: none;
+              outline: none;
+              i {
+                font-size: 17px;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          span, & > span > i {
+            color: #05c3ff;
+          }
+
+          .header_sub-menu {
+            display: block;
+          }
+        }
+
+        .header_sub-menu {
+          width: 325px;
+          right: 0;
+          top: 5.5rem;
+          padding: 15px 0;
+
+          &::before {
+            right: 3rem;
+            top: -0.85rem;
+            border-color: transparent transparent #fff transparent;
+          }
+
+          li {
+            border: none;
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            padding: 0 0.75rem;
+
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      & > span {
+        font-weight: normal;
+        color: #ebebeb;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .cart {
+      padding: 1rem!important;
+      &_item {
+        border-bottom: 1px solid #ebebeb!important;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem!important;
+
+        &_image {
+          width: 30%;
+        }
+
+        &_info {
+          .name {
+            font-size: 14px;
+            color: #000;
+
+            &:hover {
+              text-decoration: none;
+              color: #05c3ff;
+            }
+          }
+
+          .price {
+            font-weight: bold;
+            color: #f61900;
+          }
+
+          .quantity {
+            position: relative;
+            width: 40%;
+
+            button {
+              position: absolute;
+              right: 0;
+              height: 50%;
+              width: 1.25rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: none;
+              cursor: pointer;
+
+              &:first-child {
+                top: 0;
+                background-color: #ebebeb;
+                color: #fff;
+              }
+
+              &:last-child {
+                bottom: 0;
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #ebebeb;
+              }
+
+              &:hover {
+                color: #05c3ff;
+              }
+
+            }
+
+            input {
+              height: 2.5rem;
+              width: 80%;
+              border-radius: 0;
+              border: 1px solid #ebebeb;
+              border-right: none;
+              text-align: center;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+            }
+          }
+        }
+
+        i.fa-times {
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          &:hover {
+            color: #05c3ff;
+          }
+        }
+      }
+
+      a:last-child {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 0;
+        font-size: 16px;
+        color: #fff;
+        background-color: #05c3ff;
+        border-radius: 7px;
+        border: 1px solid #05c3ff;
+        i {
+          color: #fff;
+          margin-right: 0.25rem;
+          font-size: 18px;
+        }
+
+        &:hover {
+          background-color: #fff;
+          color: #05c3ff;
+          text-decoration: none;
+
+          i {
+            color: #05c3ff;
+          }
+        }
+      }
+
+    }
+  }
+
+  &_sub-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    z-index: 99;
+    box-shadow: 0 0 15px -5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 13px 10px;
+      border-color: transparent transparent #ebebeb transparent;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    &_contact {
+      width: 35%;
+    }
+
+    &_search {
+      width: 35%;
+    }
+
+    &_logo {
+      width: 30%;
+      padding: 1rem 5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    display: none;
+  }
+}
+
