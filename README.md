@@ -6,19 +6,19 @@ This is a graduation project code by Dang Quang Ha who is student in Hanoi unive
 
 To install and run the project please follow the steps below:
 
-####Step 1: Clone project from github
+<b>Step 1: Clone project from github</b>
 ```
 git clone https://github.com/dangquangha/delta-watch.git
 cd delta-watch
 ```
 
-####Step 2: Run composer and npm to install the necessary packages in the project
+<b>Step 2: Run composer and npm to install the necessary packages in the project</b>
 ```
 composer install
 npm install 
 ```
 
-####Step 3: Build database and config database
+<b>Step 3: Build database and config database</b>
 ```
 cp .env.example .env
 ```
@@ -33,12 +33,12 @@ DB_USERNAME=your_username
 DB_PASSWORD=your_password 
 ```
 
-####Step 4: Generate key for project
+<b>Step 4: Generate key for project</b>
 ```
 php artisan key:generate 
 ```
 
-####Step 5: Run migrations and seeder to have data
+<b>Step 5: Run migrations and seeder to have data</b>
 ```
 php artisan migrate
 php artisan db:seed
