@@ -1,0 +1,52 @@
+.content {
+
+    &_info {
+        margin-top: 3rem;
+
+        &_option {
+            list-style: none;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #ebebeb;
+            li {
+                margin: 0 2rem 0 0;
+                padding: 0.25rem 0;
+                label {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+
+                &.active {
+                    border-bottom: 5px solid #05c3ff;
+                    label {
+                        span {
+                            color: #05c3ff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .show_info_option {
+            display: none;
+            margin-top: 0.5rem;
+
+            h3 {
+                color: #666;
+            }
+        }
+
+        input[name="info_option"] {
+            display: none;
+        }
+
+        input[name="info_option"]:checked {
+            & + .show_info_option {
+                display: block;
+            }
+        }
+    }
+}

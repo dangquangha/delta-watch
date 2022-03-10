@@ -7,6 +7,22 @@ let build_scss = [
     {
         from: '/resources/sass/pages/home/index.scss',
         to: 'css/home.css'
+    },
+    {
+        from: '/resources/sass/pages/listing/index.scss',
+        to: 'css/listing.css'
+    },
+    {
+        from: '/resources/sass/pages/detail/index.scss',
+        to: 'css/detail.css'
+    },
+    {
+        from: '/resources/sass/pages/login/index.scss',
+        to: 'css/login.css'
+    },
+    {
+        from: '/resources/sass/pages/register/index.scss',
+        to: 'css/register.css'
     }
 ];
 
@@ -14,6 +30,22 @@ let build_js = [
     {
         from: '/resources/js/pages/home/index.js',
         to: 'js/home.js'
+    },
+    {
+        from: '/resources/js/pages/listing/index.js',
+        to: 'js/listing.js'
+    },
+    {
+        from: '/resources/js/pages/detail/index.js',
+        to: 'js/detail.js'
+    },
+    {
+        from: '/resources/js/pages/login/index.js',
+        to: 'js/login.js'
+    },
+    {
+        from: '/resources/js/pages/register/index.js',
+        to: 'js/register.js'
     }
 ];
 

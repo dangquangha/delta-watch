@@ -6,8 +6,8 @@
                 <div class="account">
                     <span><i class="far fa-user-circle"></i>&nbsp;Tài khoản</span>
                     <ul class="header_sub-menu">
-                        <li><a href="#">Đăng nhập</a></li>
-                        <li><a href="#">Đăng ký</a></li>
+                        <li><a href="{{ route('get.login') }}">Đăng nhập</a></li>
+                        <li><a href="{{ route('get.register') }}">Đăng ký</a></li>
                     </ul>
                 </div>
                 <div class="call">

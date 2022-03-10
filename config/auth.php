@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'customer' => [
+            'driver' => 'session',
+            'provider' => 'customers',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -71,10 +76,10 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+         'customers' => [
+             'driver' => 'eloquent',
+             'model' => App\Models\Customer::class,
+         ],
     ],
 
     /*
@@ -99,6 +104,13 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+        'customers' => [
+            'provider' => 'customers',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
     ],
 
     /*
@@ -113,5 +125,4 @@ return [
     */
 
     'password_timeout' => 10800,
-
 ];

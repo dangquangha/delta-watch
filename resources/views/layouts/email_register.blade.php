@@ -1,0 +1,1 @@
+<h1>Welcome {{ $name }} to Delta Watch</h1>

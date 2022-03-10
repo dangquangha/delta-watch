@@ -1,0 +1,294 @@
+.content {
+  &_main {
+    &-left {
+      padding: 0;
+      padding-right: 2rem;
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .list-category {
+        box-shadow: 0px 1px 51.87px 5.13px rgba(20, 64, 51, 0.09);
+        padding: 1rem 0;
+        padding-bottom: 0;
+
+        .title {
+          margin: 0 1rem 1rem 1rem;
+          font-size: 16px;
+          position: relative;
+          color: #000;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        ul {
+          padding: 0;
+          list-style: none;
+
+          li:hover {
+            & > a, & > i.fa-angle-right {
+              text-decoration: none;
+              color: #05c3ff;
+            }
+          }
+
+          .menu-item {
+            border-bottom: 1px solid #ebebeb;
+            position: relative;
+            padding: 0.5rem 0;
+
+            i.fa-minus {
+              display: none;
+            }
+
+            i.fa-minus, i.fa-plus {
+              position: absolute;
+              right: 0rem;
+              font-size: 12px;
+              top: 15px;
+              padding: 0 1rem;
+              cursor: pointer;
+            }
+
+            a {
+              font-size: 14px;
+              padding-left: 1.5rem;
+              position: relative;
+              color: #000;
+              margin-left: 1rem;
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 17px;
+                height: 17px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url(//bizweb.dktcdn.net/100/372/447/themes/744792/assets/watchicon.png?1574997861265);
+              }
+            }
+          }
+        }
+      }
+
+      .filter-mobile {
+        display: none;
+      }
+
+      .filter-price, .filter-size, .filter-brand, .filter-shape {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0px 1px 51.87px 5.13px rgba(20, 64, 51, 0.09);
+
+        .title {
+          margin: 0 0 1rem 0;
+          font-size: 16px;
+          position: relative;
+          color: #000;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        ul {
+          margin-bottom: 0;
+          overflow: hidden;
+          overflow-y: auto;
+
+          li {
+            display: flex;
+            margin-top: 0.5rem;
+
+            label {
+              font-size: 14px;
+              color: #000;
+              margin-left: 0.5rem;
+              cursor: pointer;
+
+              &:hover {
+                color: #05c3ff;
+              }
+            }
+
+            input[type="checkbox"] {
+              display: none;
+            }
+          }
+        }
+
+        .fake-checkbox {
+          width: 20px;
+          height: 20px;
+          border: solid 2px #ebebeb;
+          margin-right: 0.5rem;
+          cursor: pointer;
+        }
+
+        .fake-checkbox-active {
+          background-color: #fff;
+          border: 1px solid #05c3ff;
+          position: relative;
+
+          &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: 12%;
+            height: 80%;
+            width: 80%;
+            background-color: #05c3ff;
+          }
+        }
+
+        .fake-checkbox-active ~ label {
+          color: #05c3ff;
+        }
+      }
+
+      .filter-color {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0px 1px 51.87px 5.13px rgba(20, 64, 51, 0.09);
+
+        .title {
+          margin: 0 0 1rem 0;
+          font-size: 16px;
+          position: relative;
+          color: #000;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        ul {
+          display: block;
+
+          li {
+            display: inline-block;
+            margin-right: 0.5rem;
+
+            div {
+              height: 2rem;
+              width: 2rem;
+              border-radius: 50%;
+
+              &:hover {
+                background-color: #fff !important;
+                border: 1px solid #9B59B6;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .content {
+    &_main {
+      &-left {
+        position: fixed;
+        height: 100vh;
+        z-index: 100;
+        top: 0;
+        right: -33%;
+        background-color: #fff;
+        padding: 1rem;
+        border: 1px solid #ebebeb;
+        transition: 0.3s;
+        overflow: visible;
+        overflow-y: auto;
+
+        &-active {
+          right: 0 !important;
+        }
+      }
+
+      .open-main-left-mobile {
+        display: flex !important;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: #05c3ff;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 0;
+        top: 45%;
+        transition: 0.3s;
+        z-index: 100;
+
+        i {
+          font-size: 18px;
+          color: #fff;
+        }
+
+        &-active {
+          right: 33%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .content {
+    padding: 0 1rem;
+
+    .open-main-left-mobile {
+      right: 0;
+
+      &-active {
+        right: 40vw;
+      }
+    }
+
+    &_main {
+      &-left {
+        width: 40vw;
+        right: -40vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .content {
+    .open-main-left-mobile {
+      &-active {
+        right: 50vw;
+      }
+    }
+
+    &_main {
+      &-left {
+        width: 50vw;
+        right: -50vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .content {
+    .open-main-left-mobile {
+      &-active {
+        right: 55vw;
+      }
+    }
+
+    &_main {
+      &-left {
+        width: 55vw;
+        right: -55vw;
+      }
+    }
+  }
+}

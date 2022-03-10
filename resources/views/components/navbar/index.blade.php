@@ -3,12 +3,12 @@
         <div class="row justify-content-center">
             <ul class="mb-0">
                 <li>
-                    <a href="#">
+                    <a href="{{ route('get.home') }}">
                         Trang chủ
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('get.listing') }}">
                         Sản phẩm
                         <i class="fa fa-angle-down"></i>
                     </a>
@@ -178,10 +178,6 @@
                         </li>
                         <li>
                             <a href="#" title="Huawei Watch">Huawei Watch</a>
-                            <i class="fa fa-angle-right"></i>
-                            <ul class="sub-menu-2">
-                                <li><a href="#" title="Đồng hồ sức khỏe Mi">Đồng hồ sức khỏe Mi</a></li>
-                            </ul>
                         </li>
                         <li>
                             <a href="#" title="Phụ kiện nổi bật">Phụ kiện nổi bật </a>

@@ -1,0 +1,181 @@
+.content {
+    &_main {
+        &-left {
+            .big-pic {
+                width: 80%;
+                max-height: 400px;
+                overflow: hidden;
+
+                img {
+                    display: none;
+                    height: 100%;
+                }
+
+                .big-pic-active {
+                    display: block;
+                }
+            }
+
+            .thumbnail {
+                width: 20%;
+                img {
+                    margin-bottom: 0.5rem;
+                    border: 1px solid transparent;
+
+                     &:last-child {
+                         margin-bottom: 0;
+                     }
+                }
+
+                img.thumbnail-active {
+                    border: 1px solid #05c3ff;
+                }
+            }
+        }
+
+        &-right {
+            .title-product {
+                color: #000;
+                font-size: 28px;
+                font-family: "Arial";
+                margin: 0px 0 15px;
+                font-weight: 400;
+            }
+
+            .price-product {
+                font-size: 24px;
+                color: #f61900;
+                font-weight: 700;
+                font-family: "Arial";
+            }
+
+            .option-quantity {
+                margin-top: 0.5rem;
+                h4 {
+                    font-size: 12px;
+                    margin-bottom: 0.75rem;
+                    color: #000;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-family: 'Open Sans', sans-serif;
+                }
+
+                div {
+                    display: inline-block;
+                }
+
+                .quantity {
+                    border: 1px solid #ebebeb;
+                    padding: 0.75rem 0.25rem;
+
+                    button {
+                        border: none;
+                        outline: none;
+                        background-color: #fff;
+
+                        i {
+                            color: #666;
+                        }
+                    }
+
+                    input {
+                        border: none;
+                        width: 4rem;
+                        color: #f61900;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+                div:last-child {
+                    button {
+                        font-family: "Arial";
+                        color: #fff;
+                        font-size: 16px;
+                        text-align: center;
+                        border-radius: 5px;
+                        font-weight: 700;
+                        padding: 0.95rem 1rem;
+                        margin-left: 0.5rem;
+
+                        i {
+                            color: #fff;
+                        }
+
+                        &:first-child {
+                            background: #f61900;
+                            border: solid 1px #f61900;
+                        }
+
+                        &:last-child {
+                            background-color: #34b1e2;
+                            border: 1px solid #34b1e2;
+                        }
+
+                        &:hover {
+                            background: #05c3ff;
+                            border: solid 1px #05c3ff;
+                        }
+                    }
+                }
+            }
+
+            .free-discuss {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 2rem;
+                padding: 1rem 1rem 1rem 1rem;
+                background-color: #34b1e2;
+                border-radius: 5px;
+                h4 {
+                    width: 100%;
+                    text-align: center;
+                    color: #fff;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+
+                    i {
+                        color: #fff;
+                        font-size: 18px;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    width: 100%;
+
+                    input {
+                        width: 80%;
+                        font-size: 14px;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        height: 2.75rem;
+                    }
+
+                    button {
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                        width: 30%;
+                        border: 1px solid #f61900;
+                        color: #fff;
+                        background-color: #f61900;
+                        text-transform: uppercase;
+                        height: 2.75rem;
+                        font-size: 15px;
+                        &:hover {
+                            background-color: #fff;
+                            color: #f61900;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
