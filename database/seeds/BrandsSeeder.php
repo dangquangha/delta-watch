@@ -23,7 +23,8 @@ class BrandsSeeder extends Seeder
                 'br_name'        => $brand['name'],
                 'br_slug'        => Str::slug($brand['name']),
                 'br_description' => $brand['description'],
-                'br_logo'        => $brand['logo'],
+                'br_logo'        => 'brands/' . $brand['logo'],
+                'br_status'      => 1,
                 'created_at'     => now()
             ];
         }

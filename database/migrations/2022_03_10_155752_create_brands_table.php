@@ -19,6 +19,7 @@ class CreateBrandsTable extends Migration
             $table->string('br_slug')->unique();
             $table->text('br_description')->nullable();
             $table->string('br_logo');
+            $table->integer('br_status')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

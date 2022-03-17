@@ -1,6 +1,7 @@
 <?php
 
 Route::get('/', 'HomeController@index')->name('get.home');
+Route::get('products-by-brand/{slug}', 'HomeController@getProductsByBrand')->name('get.products-by-brand');
 Route::get('listing', 'ProductController@listing')->name('get.listing');
 Route::get('detail', 'ProductController@detail')->name('get.detail');
 //Route::get('cart', 'CartController@index')->name('get.cart');
@@ -14,4 +15,6 @@ Route::group(['middleware' => 'guest:customer'], function () {
 
 Route::get('logout', 'AuthController@logout')->name('get.logout');
 
-
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

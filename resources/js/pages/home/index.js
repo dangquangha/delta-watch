@@ -9,6 +9,7 @@ const HOME = {
         this.buildSlideProductsForMan();
         this.buildSlideProductsForWoman();
         this.buildSlideBestEquipments();
+        this.loadProductByBrand()
     },
 
     buildSlideNewProducts() {
@@ -106,7 +107,34 @@ const HOME = {
                 },
             }
         });
-    }
+    },
+
+    loadProductByBrand()
+    {
+        var url = $('.brand_item.active').data('route');
+        $.ajax({
+            url: url,
+            success: function(view) {
+                var el = $('#list-product-by-brand');
+                el.html()
+                el.html(view);
+            }
+        });
+
+        $('.brand_item').click(function () {
+            $('.brand_item.active').removeClass('active');
+            $(this).addClass('active');
+            var url = $(this).data('route');
+            $.ajax({
+                url: url,
+                success: function(view) {
+                    var el = $('#list-product-by-brand');
+                    el.html()
+                    el.html(view);
+                }
+            });
+        })
+    },
 }
 
 $(window).on('load', function () {

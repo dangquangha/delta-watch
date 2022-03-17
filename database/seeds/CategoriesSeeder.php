@@ -21,10 +21,11 @@ class CategoriesSeeder extends Seeder
         $categories = [];
         foreach ($data as $category) {
             $categories[] = [
-                'cat_name' => $category['name'],
-                'cat_slug' => Str::slug($category['name']),
+                'cat_name'      => $category['name'],
+                'cat_slug'      => Str::slug($category['name']),
                 'cat_parent_id' => $category['parent_id'],
-                'created_at'     => now()
+                'cat_status'    => 1,
+                'created_at'    => now()
             ];
         }
 

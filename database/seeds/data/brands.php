@@ -1,9 +1,9 @@
 <?php
 
 return [
-    ['name' => 'Apple', 'description' => '', 'logo' => 'brand-1.png'],
-    ['name' => 'Fitbit', 'description' => '', 'logo' => 'brand-2.png'],
-    ['name' => 'Huawei', 'description' => '', 'logo' => 'brand-4.png'],
-    ['name' => 'Samsung', 'description' => '', 'logo' => 'brand-5.png'],
-    ['name' => 'Xiaomi', 'description' => '', 'logo' => 'brand-6.png'],
+    ['name' => 'Apple', 'description' => '', 'logo' => 'apple.png'],
+    ['name' => 'Fitbit', 'description' => '', 'logo' => 'fitbit.png'],
+    ['name' => 'Huawei', 'description' => '', 'logo' => 'huawei.png'],
+    ['name' => 'Samsung', 'description' => '', 'logo' => 'samsung.png'],
+    ['name' => 'Xiaomi', 'description' => '', 'logo' => 'xiaomi.png'],
 ];

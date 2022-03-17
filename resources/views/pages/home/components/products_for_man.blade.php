@@ -12,27 +12,27 @@
             <div class="col-xl-8 col-lg-8 col-sm-12 pl-0 pr-0">
                 <div class="swiper-container watch-for-man_list">
                     <div class="swiper-wrapper">
-                        @for ($i = 1; $i <= 10; $i++)
+                        @foreach ($productsForMan as $product)
                             <div class="swiper-slide watch-for-man_item">
                                 <div class="item_image">
-                                    <img src="{{ asset('images/products/product1.jpg') }}" width="100%" alt="">
+                                    <img src="{{ asset('storage/' . $product->po_image) }}" width="100%" alt="">
                                     <div class="item_image_mask">
                                         <div class="animation3d">
                                             <div>
                                                 <i class="fas fa-search-plus"></i>
                                             </div>
-                                            <div class="js-add-to-cart" data-item="{{ $i }}" data-route="">
+                                            <div class="js-add-to-cart" data-item="{{ $product->id }}" data-route="">
                                                 <i class="fas fa-shopping-basket iconcart"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item_info">
-                                    <a href="" class="item_info_name">Samsung Gear Fit </a>
-                                    <p class="item_info_price">{{ number_format(4900000, 0, '', '.') . 'đ' }}</p>
+                                    <a href="" class="item_info_name">{{ $product->po_name }} </a>
+                                    <p class="item_info_price">{{ number_format($product->po_price, 0, '', '.') . 'đ' }}</p>
                                 </div>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                     <div class="swiper-button-next watch-for-man_slide-next">
                         <img src="{{ asset('images/icons/arrow.png') }}" alt="">
