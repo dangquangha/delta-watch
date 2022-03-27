@@ -1,3 +1,10 @@
+@inject('navbar', 'App\Http\Controllers\NavbarController')
+
+@php
+    $categories = $navbar->getCategories();
+    $brands = $navbar->getBrands();
+@endphp
+
 <div class="nav-bar">
     <div class="container">
         <div class="row justify-content-center">
@@ -8,161 +15,32 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('get.listing') }}">
+                    <a href="{{ route('get.product') }}">
                         Sản phẩm
                         <i class="fa fa-angle-down"></i>
                     </a>
                     <div class="menu-product-drop-down">
                         <div class="container">
                             <div class="row">
-                                <div class="col-xl-3 col-lg-3">
-                                    <ul class="pl-0">
-                                        <h3>
-                                            <a href="/dong-ho-nam" title="Đồng hồ nam">Đồng hồ nam</a>
-                                        </h3>
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Philips">Đồng hồ Philips</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Epos swiss">Đồng hồ Epos swiss</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Eries gold">Đồng hồ Eries gold</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Citizen">Đồng hồ Citizen</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Tourbillon">Đồng hồ Tourbillon</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Du manoir">Đồng hồ Du manoir</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="col-xl-3 col-lg-3">
-                                    <ul class="pl-0">
-                                        <h3>
-                                            <a href="/dong-ho-nam" title="Đồng hồ nam">Đồng hồ nam</a>
-                                        </h3>
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Philips">Đồng hồ Philips</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Epos swiss">Đồng hồ Epos swiss</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Eries gold">Đồng hồ Eries gold</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Citizen">Đồng hồ Citizen</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Tourbillon">Đồng hồ Tourbillon</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Du manoir">Đồng hồ Du manoir</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="col-xl-3 col-lg-3">
-                                    <ul class="pl-0">
-                                        <h3>
-                                            <a href="/dong-ho-nam" title="Đồng hồ nam">Đồng hồ nam</a>
-                                        </h3>
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Philips">Đồng hồ Philips</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Epos swiss">Đồng hồ Epos swiss</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Eries gold">Đồng hồ Eries gold</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Citizen">Đồng hồ Citizen</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Tourbillon">Đồng hồ Tourbillon</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Du manoir">Đồng hồ Du manoir</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="col-xl-3 col-lg-3">
-                                    <ul class="pl-0">
-                                        <h3>
-                                            <a href="/dong-ho-nam" title="Đồng hồ nam">Đồng hồ nam</a>
-                                        </h3>
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Philips">Đồng hồ Philips</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Epos swiss">Đồng hồ Epos swiss</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Eries gold">Đồng hồ Eries gold</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Citizen">Đồng hồ Citizen</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Tourbillon">Đồng hồ Tourbillon</a>
-                                        </li>
-
-                                        <li>
-                                            <i class="fa fa-angle-right"></i>
-                                            <a href="#" title="Đồng hồ Du manoir">Đồng hồ Du manoir</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
+                                @foreach($categories as $category)
+                                    <div class="col-xl-3 col-lg-3">
+                                        <ul class="pl-0">
+                                            <h3>
+                                                <a href="{{ route('get.slug', $category->cat_slug) }}" title="{{ $category->cat_name }}">
+                                                    {{ $category->cat_name }}
+                                                </a>
+                                            </h3>
+                                            @foreach($category->childrens as $child)
+                                                <li>
+                                                    <i class="fa fa-angle-right"></i>
+                                                    <a href="{{ route('get.slug', $child->cat_slug) }}" title="{{ $child->cat_name }}">
+                                                        {{ $child->cat_name }}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -170,24 +48,17 @@
                 <li style="position: relative;">
                     <a href="#"> Smartwatch <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a href="#" title="Apple Watch">Apple Watch </a>
-                        </li>
-                        <li>
-                            <a href="#" title="Xiaomi Watch">Xiaomi Watch </a>
-                        </li>
-                        <li>
-                            <a href="#" title="Huawei Watch">Huawei Watch</a>
-                        </li>
-                        <li>
-                            <a href="#" title="Phụ kiện nổi bật">Phụ kiện nổi bật </a>
-                        </li>
+                        @foreach($brands as $brand)
+                            <li>
+                                <a href="{{ route('get.slug', $brand->br_slug) }}" title="{{ $brand->br_name }}">
+                                    {{ $brand->br_name . ' Watch' }}
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
-                        Tin tức
-                    </a>
+                    <a href="#">Tin tức</a>
                 </li>
                 <li>
                     <a href="#">Về chúng tôi</a>

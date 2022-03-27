@@ -1,11 +1,11 @@
 import HEADER from "../../components/header";
-import BACKTOTOP from "../../components/backtotop";
+import BACK_TO_TOP from "../../components/backtotop";
 import '@zeitiger/elevatezoom';
 
 const DETAIL = {
     init() {
         HEADER.init();
-        BACKTOTOP.init();
+        BACK_TO_TOP.init();
 
         this.zoomImage();
         this.buildSlider();

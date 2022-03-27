@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
-@section('title', 'Sản phẩm XXX')
+@php
+    if ($product) {
+        $metaTitle = $product->po_name;
+    }
+@endphp
+@section('title', $metaTitle ?? 'Sản phẩm Delta Watch')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/detail.css') }}">

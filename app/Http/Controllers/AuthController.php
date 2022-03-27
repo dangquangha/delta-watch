@@ -16,6 +16,7 @@ class AuthController extends Controller
 
     public function __construct(AuthService $authService)
     {
+        parent::__construct();
         $this->authService = $authService;
     }
 

@@ -23,6 +23,10 @@ let build_scss = [
     {
         from: '/resources/sass/pages/register/index.scss',
         to: 'css/register.css'
+    },
+    {
+        from: '/resources/sass/pages/cart/index.scss',
+        to: 'css/cart.css'
     }
 ];
 
@@ -46,6 +50,10 @@ let build_js = [
     {
         from: '/resources/js/pages/register/index.js',
         to: 'js/register.js'
+    },
+    {
+        from: '/resources/js/pages/cart/index.js',
+        to: 'js/cart.js'
     }
 ];
 

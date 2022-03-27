@@ -27,6 +27,7 @@ class RegisterRequest extends FormRequest
             'password.required' => 'Mật khẩu là trường bắt buộc',
             'password.min' => 'Mật khẩu phải ít nhất :min ký tự',
             'repassword.same' => 'Mật khẩu nhập lại không khớp',
+            'repassword.required' => 'Mật khẩu nhập là trường bắt buộc',
         ];
     }
 }

@@ -21,7 +21,7 @@ return [
     ['name' => 'Đồng hồ Seiko', 'parent_id' => 2],
 
     ['name' => 'Đồng hồ đôi Eros', 'parent_id' => 3],
-    ['name' => 'Đông ht_description', 'parent_id' => 3],
+    ['name' => 'Đông hồ Daniel wellington', 'parent_id' => 3],
     ['name' => 'Đồng hồ đôi Casio', 'parent_id' => 3],
     ['name' => 'Đồng hồ đôi Emoji', 'parent_id' => 3],
     ['name' => 'Đồng hồ Omega', 'parent_id' => 3],

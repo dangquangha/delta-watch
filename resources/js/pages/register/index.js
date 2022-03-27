@@ -1,10 +1,10 @@
 import HEADER from "../../components/header";
-import BACKTOTOP from "../../components/backtotop";
+import BACK_TO_TOP from "../../components/backtotop";
 
 const REGISTER = {
     init() {
         HEADER.init();
-        BACKTOTOP.init();
+        BACK_TO_TOP.init();
     }
 }
 

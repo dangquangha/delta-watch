@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Product;
-use Illuminate\Http\Request;
-use function json_encode;
 
 class HomeController extends Controller
 {
@@ -15,6 +13,7 @@ class HomeController extends Controller
     public function __construct(Product $product,
                                 Brand $brand)
     {
+        parent::__construct();
         $this->product = $product;
         $this->brand   = $brand;
     }

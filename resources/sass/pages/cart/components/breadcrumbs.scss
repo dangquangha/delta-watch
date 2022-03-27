@@ -1,0 +1,16 @@
+.breadcrumb {
+  background-color: unset;
+
+  a, i {
+    color: #000;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #05c3ff;
+  }
+
+  a:last-child {
+    color: #05c3ff;
+  }
+}

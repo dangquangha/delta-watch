@@ -1,8 +1,8 @@
-const BACKTOTOP = {
+const BACK_TO_TOP = {
     init() {
-        this.backtotop();
+        this.backToTop();
     },
-    backtotop() {
+    backToTop() {
         window.addEventListener("scroll", (event) => {
             let scrollY = window.scrollY;
             if (scrollY >= 200) {
@@ -21,4 +21,4 @@ const BACKTOTOP = {
     }
 }
 
-export default BACKTOTOP
+export default BACK_TO_TOP

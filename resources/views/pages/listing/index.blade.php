@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Sản phẩm Delta Watch')
+@section('title', $metaTitle ?? 'Sản phẩm Delta Watch')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/listing.css') }}">

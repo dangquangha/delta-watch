@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Support\Facades\Auth;
-use function in_array;
 
 class Authenticate extends Middleware
 {
@@ -13,7 +12,7 @@ class Authenticate extends Middleware
     {
         if ( in_array('customer', $guards) ) {
             if ( !Auth::guard('customer')->check() ) {
-                return route('get.login');
+                return redirect()->route('get.login');
             }
         }
 

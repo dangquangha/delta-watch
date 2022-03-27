@@ -9,13 +9,10 @@
         </div>
         <ul class="">
             <li class="menu-item">
-                <a href="#">Trang chủ</a>
+                <a href="{{ route('get.home') }}">Trang chủ</a>
             </li>
             <li class="menu-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="menu-item">
-                <a href="#">Trang chủ</a>
+                <a href="{{ route('get.product') }}">Sản phẩm</a>
             </li>
             <li class="menu-item">
                 <a href="#">Tin tức</a>
@@ -43,24 +40,6 @@
                     </label>
                 </li>
             @endfor
-        </ul>
-    </div>
-
-    <div class="filter-shape">
-        <div class="title">
-            Kiểu dáng
-        </div>
-        <ul>
-            <li>
-                @for($i=1; $i <= 5; $i++)
-                    <li>
-                        <div class="fake-checkbox"></div>
-                        <label class="" data-id="{{ $i }}">
-                            {{ 'Shape ' . $i }}
-                        </label>
-                    </li>
-                @endfor
-            </li>
         </ul>
     </div>
 

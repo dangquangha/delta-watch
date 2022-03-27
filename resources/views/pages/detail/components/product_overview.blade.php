@@ -3,13 +3,13 @@
         <div class="content_main-left col-xl-5 col-lg-5 col-sm-12">
             <div class="row">
                 <div class="big-pic">
-                    <img class="big-pic-active" src="{{ asset('images/products/product1.jpg') }}" alt="" width="100%">
+                    <img class="big-pic-active" src="{{ asset('storage/' . $product->po_image) }}" alt="" width="100%">
                     @for ($i=1; $i <= 3; $i++)
                         <img src="{{ asset('images/products/product1.jpg') }}" alt="" width="100%">
                     @endfor
                 </div>
                 <div class="thumbnail">
-                    <img class="thumbnail-active" src="{{ asset('images/products/product1.jpg') }}" alt="" width="100%">
+                    <img class="thumbnail-active" src="{{ asset('storage/' . $product->po_image) }}" alt="" width="100%">
                     @for ($i=1; $i <= 3; $i++)
                         <img src="{{ asset('images/products/product1.jpg') }}" alt="" width="100%">
                     @endfor
@@ -18,10 +18,11 @@
         </div>
         <div class="content_main-right col-xl-6 col-lg-6 col-sm-12 pr-0">
             <form method="post">
-                <h1 class="title-product">Gear Pro Series 5</h1>
-                <p class="price-product">@php echo number_format(5000000, 0, '', '.') . 'đ'; @endphp</p>
+                <h1 class="title-product">{{ $product->po_name }}</h1>
+                <p class="price-product">{{ number_format($product->po_price, 0, '', '.') . 'đ' }}</p>
                 <p class="des-product">
-                    Theo dõi giấc ngủ, Đo nhịp tim, Tính lượng Calories tiêu thụ, Đếm số bước chân, Tính quãng đường chạy, Chế độ luyện tập, Nghe nhạc với tai nghe Bluetooth, Màn hình luôn hiển thị, Gọi điện trên đồng hồ, Từ chối cuộc gọi, Dự báo thời tiết, La bàn, Thay mặt đồng hồ, Nhận cuộc gọi, Tìm điện thoại
+                    {{ $product->po_description }}
+                </p>
                 <div class="option-quantity">
                     <div>
                         <button class="js-add-to-cart add-to-cart" style="margin-left: 0" data-item="" data-route="#" type="button">

@@ -1,15 +1,20 @@
 import HEADER from "../../components/header";
-import BACKTOTOP from "../../components/backtotop";
+import CART from "../../components/cart";
+import BACK_TO_TOP from "../../components/backtotop";
+import SHOW_MODAL_PRODUCT from "../../components/show_modal_product";
 
 const HOME = {
     init() {
         HEADER.init();
-        BACKTOTOP.init();
+        CART.init();
+        BACK_TO_TOP.init();
+        SHOW_MODAL_PRODUCT.init();
+
         this.buildSlideNewProducts();
         this.buildSlideProductsForMan();
         this.buildSlideProductsForWoman();
         this.buildSlideBestEquipments();
-        this.loadProductByBrand()
+        this.loadProductByBrand();
     },
 
     buildSlideNewProducts() {
@@ -109,8 +114,7 @@ const HOME = {
         });
     },
 
-    loadProductByBrand()
-    {
+    loadProductByBrand() {
         var url = $('.brand_item.active').data('route');
         $.ajax({
             url: url,
